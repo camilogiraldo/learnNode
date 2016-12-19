@@ -5,7 +5,7 @@ if (process.argv[2]) {   //If an argument is passed as a param through console
   var url = process.argv[2];
 
   http.get(url, function(res) { //Issue an http request to url passed as a parameter the callback res
-    res.pipe(bl(function(err, data){
+    res.pipe(bl(function(err, data){ // `data` is a complete Buffer object containing the full data 
       if (err)
        console.log(err);
 
